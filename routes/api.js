@@ -8,6 +8,6 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
-router.use('/.pets', petRouter);
+router.use('/pets', petRouter);
 
 module.exports = router;

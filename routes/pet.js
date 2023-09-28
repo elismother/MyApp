@@ -1,4 +1,4 @@
-var express = require('express')
+var express = require('express');
 var router = express.Router();
 
 // mock some data
@@ -25,45 +25,35 @@ const pets = [
         breed: "Tabby Cat",
         notes: [
             "Is Fatty Fat Fat",
-            "Sent Jesse to the hospital"
+            "Sent me to the Hospital"
         ]
     }
 ];
 
-
-// define our pet endpoints
-// BASIC ENDPOINT EXAMPLE
-// router.get('',() => {
-//  DO API STUFF
-// })
-
-// GET REQUEST (/ INDICATES READ ALL)
-router.get('/',(req, res) => {
+// GET: read all
+router.get('/', (req, res) => {
+    // get all pets
     res.status(200);
     res.json(pets);
-    
 });
 
-// get request: get a single pet by id
+// GET: get a single pet by id
 router.get('/:id', (req, res) => {
-
+    // get a single pet
 });
 
-// POST take data and put it in our database
-// Create:
-// Read:
-// Update: 
-// Delete:
+// POST: create a new pet
 router.post('/', (req, res) => {
-
+res.status(501);
+res.json({});
 });
 
-// PUT: UPDATE AN EXISTING PET
+// PUT: update an existing pet
 router.put('/:id', (req, res) => {
 
 });
 
-// DELETE: DELETE A PET
+// DELETE: delete a pet
 router.delete('/:id', (req, res) => {
 
 });
